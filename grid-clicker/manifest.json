@@ -1,0 +1,33 @@
+{
+  "short_name": "Grid",
+  "name": "Grid Clicker",
+  "description": "This plugin lets you click on cells in a grid.",
+  "maintainer": {
+    "name": "Example",
+    "email": "example-email@coursera.org"
+  },
+  "version": "0.1",
+  "configurationExamples": [{
+    "configuration": {
+      "gridSize": 5,
+      "timer": 15
+    },
+    "name": "My Config",
+    "description": "Simple config."
+  }],
+  "macros": [],
+  "authorizations": {
+    "storedValues": {
+      "recordScore": {
+        "prefix": "recordScore",
+        "scope": "PLUGIN"
+      }
+    }
+  },
+  "actionTypes": ["GET_SESSION_CONFIGURATION", "GET_STORED_VALUES", "SET_STORED_VALUES"],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": false
+    }
+  }
+}

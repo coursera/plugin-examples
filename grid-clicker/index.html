@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <style>
+
+    h1 {
+      padding: 20px 0px;
+    }
+
+    .section {
+      padding: 10px;
+      margin-left: 25px;
+    }
+
+    .cell {
+      display: inline-block;
+      border: 1px solid black;
+      height: 50px;
+      width: 50px;
+      margin-left: -1px;
+      margin-bottom: -5px;
+    }
+
+    #grid {
+      overflow: hidden;
+      padding-left: 30px;
+      padding-bottom: 10px;
+    }
+
+    #nongrid {
+      padding-left: 10px;
+      float: left;
+    }
+
+  </style>
+  <head>
+    <script src="https://www.coursera.org/widget/coursera-widget-connect-v0.js"></script>
+  </head>
+  <body>
+    <div id="nongrid" />
+      <h1>Click quick!</h1>
+      <div class="section">
+        <span>Time left: </span>
+        <span id="timer"></span>
+      </div>
+      <div class="section">
+        <span>Clicks: </span>
+        <span id="clicks"></span>
+      </div>
+      <div class="section">
+        <span>Record: </span>
+        <span id="record"></span>
+      </div>
+      <div class="section">
+        <input id="reset" type="button" value="Reset Game">
+      </div>
+    </div>
+    <div id="grid" class="col"/>
+    <script src="app.js"></script>
+  </body>
+</html>

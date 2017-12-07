@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.coursera.org/widget/coursera-connect.css">
+  </head>
+  <body>
+    <script src="https://www.coursera.org/widget/coursera-widget-connect-v0.js"></script>
+    <script>
+      function encodeData(data) {
+        return Object.keys(data)
+          .map(function(key) {
+            return [key, data[key]].map(encodeURIComponent).join("=");
+          })
+          .join("&");
+      }
+
+      function initiateApp(configuration) {
+        var frame = document.createElement("iframe");
+        frame.setAttribute(
+          "src",
+          "https://" +
+            configuration["userName"] +
+            ".typeform.com/to/" +
+            configuration["surveyId"] +
+            "?" +
+            encodeData(configuration["urlParams"] || {})
+        );
+        frame.setAttribute("width", "100%");
+        frame.setAttribute("style", "border: 0px; overflow:auto; display:block;");
+        document.body.appendChild(frame);
+        frame.setAttribute("height", document.firstElementChild.scrollHeight);
+        frame.focus();
+      }
+
+      courseraApi.callMethod({
+        type: "GET_SESSION_CONFIGURATION",
+        onSuccess: initiateApp,
+        onError: console.log
+      });
+
+      courseraApi.callMethod({
+        type: "SET_HEIGHT",
+        data: {
+          height: "600px"
+        }
+      });
+    </script>
+  </body>
+</html>

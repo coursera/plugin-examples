@@ -1,0 +1,30 @@
+{
+  "short_name": "YouTube",
+  "name": "YouTube",
+  "description": "Enable a YouTube URL.",
+  "maintainer": {
+    "name": "Example",
+    "email": "example-email@coursera.org"
+  },
+  "version": "0.0.1",
+  "sandbox": "allow-presentation allow-scripts allow-same-origin",
+  "configurationExamples": [
+    {
+      "name": "Space Shuttle",
+      "configuration": {
+        "videoId": "OnoNITE-CLc",
+        "start": 93
+      }
+    }
+  ],
+  "authorizations": {},
+  "actionTypes": ["GET_SESSION_CONFIGURATION", "SET_HEIGHT"],
+  "macros": [],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": true,
+      "minHeightPx": 0,
+      "minWidthPx": 0
+    }
+  }
+}

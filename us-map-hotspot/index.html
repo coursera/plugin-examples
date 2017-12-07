@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <meta charset="utf-8">
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'unsafe-inline' 'self' *.coursera.org d3js.org;
+    style-src 'unsafe-inline' *.coursera.org;
+  ">
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+    }
+
+    .background {
+      fill: none;
+      pointer-events: all;
+    }
+
+    #states {
+      fill: #aaa;
+    }
+
+    #states .active {
+      fill: orange;
+    }
+
+    #state-borders {
+      fill: none;
+      stroke: #fff;
+      stroke-width: 1.5px;
+      stroke-linejoin: round;
+      stroke-linecap: round;
+      pointer-events: none;
+    }
+
+    h2,
+    h4 {
+      font-weight: normal;
+      margin: 0 0 10px;
+    }
+
+    h2 {
+      font-size: 24px;
+    }
+
+    h4 {
+      font-size: 18px;
+    }
+
+    #feedback.correct {
+      color: #3bad3b;
+    }
+  </style>
+
+  <body>
+    <div id="app">
+      <h2 id="title"></h2>
+      <h4 id="feedback"></h4>
+      <div id="vis"></div>
+    </div>
+
+    <script src="https://www.coursera.org/widget/coursera-widget-connect-v0.js"></script>
+    <script src="https://d3js.org/d3.v3.min.js"></script>
+    <script src="https://d3js.org/topojson.v1.min.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>

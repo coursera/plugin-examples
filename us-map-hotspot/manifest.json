@@ -1,0 +1,37 @@
+{
+  "short_name": "Hotspot",
+  "name": "US Map Hotspot 100%",
+  "description": "This widget enables clicking US states as an answer to a quiz question.",
+  "maintainer": {
+    "name": "Example",
+    "email": "example-email@coursera.org"
+  },
+  "version": "0.0.1",
+  "sandbox": "allow-scripts allow-same-origin allow-forms",
+  "macros": [],
+  "authorizations": {},
+  "actionTypes": [
+    "SET_ANSWER",
+    "SET_HEIGHT",
+    "GET_SESSION_CONFIGURATION",
+    "GET_STORED_VALUES",
+    "SET_STORED_VALUES"
+  ],
+  "configurationExamples": [
+    {
+      "name": "Louisiana",
+      "description": "The correct answer is Louisiana",
+      "configuration": {},
+      "graderConfiguration": {
+        "stateId": 22
+      }
+    }
+  ],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": true,
+      "minHeightPx": 0,
+      "minWidthPx": 0
+    }
+  }
+}

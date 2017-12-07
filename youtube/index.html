@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://www.coursera.org/widget/coursera-connect.css">
+  </head>
+  <body>
+    <script src="https://www.coursera.org/widget/coursera-widget-connect-v0.js"></script>
+    <script>
+      function initiateApp(configuration) {
+        var frame = document.createElement('iframe')
+        var src = "https://www.youtube.com/embed/"
+          + configuration["videoId"]
+          + "?rel=0&amp;showinfo=0&amp";
+        if (configuration["start"] != null) {
+          src = src + ";start=" + configuration["start"];
+        }
+        frame.setAttribute("src", src);
+        frame.setAttribute("width", "100%");
+        frame.setAttribute("frameborder", "0");
+        frame.setAttribute("style", "border: 0px; overflow:auto; display:block;");
+        document.body.appendChild(frame);
+        frame.setAttribute("height", document.firstElementChild.scrollHeight);
+      }
+      
+      courseraApi.callMethod({
+        type: "GET_SESSION_CONFIGURATION",
+        onSuccess: initiateApp,
+        onError: console.log
+      });
+    </script>
+  </body>
+</html>

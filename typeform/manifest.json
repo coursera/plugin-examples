@@ -1,0 +1,35 @@
+{
+  "short_name": "Typeform",
+  "name": "Typeform",
+  "description": "This plugin enables typeform surveys on Coursera. Specifying a typeform user name and survey id in the widget configuration will display the typeform survey.",
+  "maintainer": {
+    "name": "Example",
+    "email": "example-email@coursera.org"
+  },
+  "version": "0.0.1",
+  "sandbox": "allow-scripts allow-same-origin allow-forms",
+  "configurationExamples": [
+      {
+          "configuration": {
+            "userName": "coursera-example",
+            "surveyId": "ZlsHU0",
+            "urlParams": {
+              "COURSE_HASHED_USER_ID": "%COURSE_HASHED_USER_ID%",
+              "COURSE_ID": "%COURSE_ID%"
+            }
+          },
+          "name": "Typeform Example",
+          "description": "Configure a typeform survey."
+      }
+  ],
+  "authorizations": {},
+  "actionTypes": ["GET_SESSION_CONFIGURATION", "SET_HEIGHT"],
+  "macros": ["COURSE_ID", "COURSE_HASHED_USER_ID"],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": true,
+      "minHeightPx": 0,
+      "minWidthPx": 0
+    }
+  }
+}
