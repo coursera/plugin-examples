@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link
+      rel="stylesheet"
+      href="https://www.coursera.org/widget/coursera-connect.css"
+    />
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
+  </head>
+  <body>
+    <div class="container">
+    <!-- This is the iframe within the plugin that your website will be loaded in.
+     Modify the sandbox attribute here as needed - note that this needs to be set before the iframe content
+     loads, so this will need to duplicate the sandbox attribute in the configuration. -->
+    <iframe
+      id="custom-url-iframe"
+      width="100%"
+      height="100%"
+      src=""
+      sandbox="allow-scripts allow-same-origin allow-popups allow-downloads"
+    ></iframe>
+ 
+  </div>
+
+    <script src="https://www.coursera.org/widget/coursera-widget-connect-v0.js"></script>
+    <script src="./initializePlugin.js"></script>
+  </body>
+</html>

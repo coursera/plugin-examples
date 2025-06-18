@@ -1,0 +1,28 @@
+{
+  "short_name": "Customized External Webpage (iframe)",
+  "name": "Customized External Webpage (iframe)",
+  "description": "Customized External Webpage (iframe)",
+  "maintainer": {
+    "name": "Example",
+    "email": "example-email@coursera.org"
+  },
+  "version": "0.0.1",
+  "sandbox": "allow-presentation allow-scripts allow-same-origin allow-popups allow-downloads",
+  "authorizations": {},
+  "configurationExamples":[{
+    "configuration": {
+      "url": "https://example.com",
+      "height": "600",
+      "sandbox": "allow-scripts allow-same-origin allow-popups allow-downloads"
+    }
+  }],
+  "actionTypes": ["GET_SESSION_CONFIGURATION", "SET_HEIGHT"],
+  "macros": [],
+  "accessibility": {
+    "mobileCompatibility": {
+      "supportsTouch": true,
+      "minHeightPx": 0,
+      "minWidthPx": 0
+    }
+  }
+}
